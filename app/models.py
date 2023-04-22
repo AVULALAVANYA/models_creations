@@ -11,7 +11,7 @@ class Webpage(models.Model):
     name=models.CharField(max_length=100,unique=True)
     url=models.URLField()
     def __str__(self):
-        return self.topic_name
+        return self.name
 
     
 class AccessRecord(models.Model):
@@ -19,4 +19,4 @@ class AccessRecord(models.Model):
     author=models.CharField(max_length=100)
     date=models.DateField()
     def __str__(self):
-        return self.topic_name
+        return self.author
